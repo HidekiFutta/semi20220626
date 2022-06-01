@@ -18,7 +18,7 @@
   $text_value1 = $_POST['input_text'];
   $text_value2 = $_POST['所属'];
   $text_value3 = $_POST['email_1'];
-  $text_value4 = $_POST['keitai'];
+ // $text_value4 = $_POST['keitai'];
   $text_value5 = $_POST['区分'];
   
   if(empty($_POST['Nナンバー'])) {
@@ -27,16 +27,11 @@
   if(empty($_POST['Dナンバー'])) {
     $_POST['Dナンバー'] = "****";}
   $text_value7 = $_POST['Dナンバー'];
-  if(empty($_POST['ブロック'])) {
-    $_POST['ブロック'] = "****";}
-  $text_value8 = $_POST['ブロック'];
-  if (empty($_POST['Rナンバー'])){ 
-    $_POST['Rナンバー'] ="****";}
-  $text_value9 = $_POST['Rナンバー'];
+  
   $text_value10 = $_POST['備考'];
   $title = $_SESSION["title"];
   $Tanto_Address = $_SESSION["Tanto_Address"];
-  $zoom = $_SESSION["zoom"];
+  //$zoom = $_SESSION["zoom"];
   $conn = $_SESSION["conncon"];
   
   //トークンチェック・POSTからSESSIONへ受け渡し
@@ -71,12 +66,12 @@
   //   print(',count='.$rows['count'].'<br>');
   }
 
-  if ($text_value4=="会場参加"){
-    $a = $rows['count'];
-    $b = $rows['count'];
-  } else{
-    $a = $rows['web'];
-  }
+  //if ($text_value4=="会場参加"){
+  $a = $rows['count'];
+  $b = $rows['count'];
+ // } else{
+ //   $a = $rows['web'];
+  //}
 
   //echo $a;
   //https://tokkan.net/php/pos.html
@@ -86,7 +81,7 @@
   //    print('切断に成功しました。<br>');
   //}
   $_SESSION["Tanto_Address"] = $Tanto_Address;
-  $_SESSION["zoom"] = $zoom;
+  //$_SESSION["zoom"] = $zoom;
   $_SESSION["conncon2"] = $conn; // send.php に値を渡す
 ?>
 
@@ -121,7 +116,7 @@
             </td>
           </tr>
           <tr>
-            <th width="170" align="Right">所属施設・学校名：</th>
+            <th width="170" align="Right">所属施設：</th>
             <td>
               <?php echo htmlspecialchars($_POST["所属"], ENT_QUOTES, "UTF-8"); ?>
             </td>
@@ -132,12 +127,7 @@
               <?php echo htmlspecialchars($_POST["email_1"], ENT_QUOTES, "UTF-8"); ?>
             </td>
           </tr>
-          <tr>
-            <th width="170" align="Right">参加形態：</th>
-            <td>
-            <?php echo htmlspecialchars($_POST['keitai'], ENT_QUOTES, 'UTF-8'); ?>
-            </td>
-          </tr>
+          
           <tr>
             <th width="170" align="Right">区　分：</th>
             <td>
@@ -156,18 +146,7 @@
               <?php echo htmlspecialchars($_POST['Dナンバー'], ENT_QUOTES, 'UTF-8'); ?>
             </td>
           </tr>
-          <tr>
-            <th width="170" align="Right">ブロック名：</th>
-            <td>
-              <?php echo htmlspecialchars($_POST['ブロック'], ENT_QUOTES, 'UTF-8'); ?>
-            </td>
-          </tr>
-          <tr>
-            <th width="170" align="Right">領収書番号：</th>
-            <td>
-              <?php echo htmlspecialchars($_POST['Rナンバー'], ENT_QUOTES, 'UTF-8'); ?>
-            </td>
-          </tr>
+          
           <tr>
             <th width="170" align="Right">備　考：</th>
             <td>
@@ -192,12 +171,9 @@
               <input type="hidden" name="input_text" value="<?php echo $text_value1; ?>">
               <input type="hidden" name="所属" value="<?php echo $text_value2; ?>">
               <input type="hidden" name="email_1" value="<?php echo $text_value3; ?>">
-              <input type="hidden" name="keitai" value="<?php echo $text_value4; ?>">
               <input type="hidden" name="区分" value="<?php echo $text_value5; ?>">
               <input type="hidden" name="Nナンバー" value="<?php echo $text_value6; ?>">
               <input type="hidden" name="Dナンバー" value="<?php echo $text_value7; ?>">
-              <input type="hidden" name="ブロック" value="<?php echo $text_value8; ?>">
-              <input type="hidden" name="Rナンバー" value="<?php echo $text_value9; ?>">
               <input type="hidden" name="備考" value="<?php echo $text_value10; ?>">
               <input type="submit" formaction="./index.php" value="戻る" style="position: relative; left: 110px; top: 20px;"/>
 
@@ -213,7 +189,7 @@
                 
                 <?php
                   //データを配列に
-                  $list = array ($a,$text_value0,$text_value1, $text_value2, $text_value3, $text_value4,$text_value5,$text_value6,$text_value7,$text_value8,$text_value9,$text_value10,$title);
+                  $list = array ($a,$text_value0,$text_value1, $text_value2, $text_value3, $text_value4,$text_value5,$text_value6,$text_value7,$text_value10,$title);
                   mb_convert_variables('Shift_JIS', 'UTF-8', $list);
                 ?>            
               <?php endif; ?>

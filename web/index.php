@@ -84,19 +84,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th class="contact-item">参加形態</th>
-                        <td class="contact-body">
-                            <label class="contact-keitai">
-                                <input type="radio" name="keitai" value="Web参加" checked="checked" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "Web参加" ){ echo 'checked'; } ?>>
-                                <span class="contact-skill-txt">Web参加　会員優先 先着<?php echo $w_teiin?>名（当日まで受付）</span>
-                            </label>
-                            <label class="contact-skill">
-                                <input type="radio" id="kaijyo" name="keitai" value="会場参加" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt" id="edit_area">会場参加　会員限定 先着<?php echo $k_teiin?>名（締切<?php echo $limit2?>）</span>
-                            </label>                     
-                        </td>                                          
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <th class="contact-item">区　分</th>
                         <td class="contact-body">
@@ -137,25 +125,6 @@
                         </td>
                     </tr>
                     
-                    <tr>
-                        <th class="contact-item">ブロック名（大放技会員のみ）</th>
-                        <td class="contact-body">
-                            <select name="ブロック" class="form-select" id ="bn">
-                            　　<option value="ブロック名" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "ブロック名" ){ echo 'selected'; } ?>>ブロック名</option>
-                                <option value="中央ブロック" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "中央ブロック" ){ echo 'selected'; } ?>>中央ブロック</option>
-                                <option value="東ブロック" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "東ブロック" ){ echo 'selected'; } ?>>東ブロック</option>
-                                <option value="西ブロック" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "西ブロック" ){ echo 'selected'; } ?>>西ブロック</option>
-                                <option value="南ブロック" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "南ブロック" ){ echo 'selected'; } ?>>南ブロック</option>
-                                <option value="北ブロック" <?php if( !empty($_POST['ブロック']) && $_POST['ブロック'] === "北ブロック" ){ echo 'selected'; } ?>>北ブロック</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="contact-item">領収書番号（非会員の方）</th>
-                        <td class="contact-body">
-                            <input type="number" id ="textforscb3" required="required" name="Rナンバー" class="form-text3" value= "<?php if( !empty($_POST['Rナンバー']) ){ echo $_POST['Rナンバー']; } ?>" disabled="disabled"/>　<font size="2">ハイフンは不要</font>
-                        </td>
-                    </tr>
                     <tr>
                         <th class="contact-item">備　考</th>
                         <td class="contact-body">
