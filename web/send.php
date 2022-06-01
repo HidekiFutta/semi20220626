@@ -49,7 +49,7 @@
   $zipcode = h($_SESSION['Dナンバー']);
   
   $textarea = h($_SESSION['備考']);
-  $number =  rtrim($keitai, '参加')."：".$count;
+  $number =   h($_POST["a"]);
   
   
 
