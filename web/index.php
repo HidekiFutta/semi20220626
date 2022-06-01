@@ -90,38 +90,31 @@
                         <td class="contact-body">
                             <label class="contact-skill">
                                 <input type="radio" name="区分" value="大放技会員" checked="checked" onclick="connecttext0('textforscb3',this.checked); "<?php if( !empty($_POST['区分']) && $_POST['区分'] === "大放技会員" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">大放技会員・協賛会員</span>
+                                <span class="contact-skill-txt">大放技会員</span>
                             </label>
                             <label class="contact-skill">
-                                <input type="radio" name="区分" value="日放技会員" onclick="connecttext1('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "日放技会員" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">日放技会員（他府県会員）</span>
+                                <input type="radio" name="区分" value="他府県会員" onclick="connecttext1('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "日放技会員" ){ echo 'checked'; } ?>/>
+                                <span class="contact-skill-txt">他府県会員（大阪以外の会員）</span>
                             </label>
                             <label class="contact-skill">
-                                <input type="radio" name="区分" value="非会員" onclick="connecttext2('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "非会員" ){ echo 'checked'; } ?> />
-                                <span class="contact-skill-txt">非会員（先に参加費をお支払いください）</span>
+                                <input type="radio" name="区分" value="申請中の方" onclick="connecttext2('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "申請中の方" ){ echo 'checked'; } ?> />  
                             </label>
                             <label class="contact-skill">
-                                <input type="radio" name="区分" value="学　生" onclick="connecttext3('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "学　生" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">学生（社会人院生は除く）</span>
+                                <input type="radio" name="区分" value="非会員" onclick="connecttext3('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "非会員" ){ echo 'checked'; } ?>/>
                             </label>
-                            <label class="contact-skill">
-                                <input type="radio" name="区分" value="一般の方" onclick="connecttext4('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "一般の方" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">一般の方（府民公開講座のみ無料で参加できます）</span>
-                            </label>
+                           
                         </td>
                     </tr>
                     <tr>
                         <th class="contact-item">日放技番号（技師会員）</th>
                         <td class="contact-body">
                             <input type="number" name="Nナンバー" id ="nn" class="form-text3" value="<?php if( !empty($_POST['Nナンバー']) ){ echo $_POST['Nナンバー']; } ?>" />
-                            <font size="2"> 協賛会員は"0"</font>
                         </td>
                     </tr>
                     <tr>
                         <th class="contact-item">大放技番号（大放技会員のみ）</th>
                         <td class="contact-body">
                             <input type="number" name="Dナンバー" id ="dn" class="form-text3" value="<?php if( !empty($_POST['Dナンバー']) ){ echo $_POST['Dナンバー']; } ?>"/>
-                             <font size="2"> 協賛会員は"0"</font>
                         </td>
                     </tr>
                     
