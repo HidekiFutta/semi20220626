@@ -166,7 +166,7 @@ $isSend = true;
 
   //pg_set_client_encoding($conn, "sjis");
   
-  $result = pg_query($link,'SELECT id, count, web FROM sanka');
+  $result = pg_query($link,'SELECT id, count FROM sanka');
   if (!$result) {
       die('クエリーが失敗しました。'.pg_last_error());
   } 
