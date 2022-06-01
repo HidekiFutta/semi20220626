@@ -62,14 +62,14 @@
   } 
   for ($i = 0 ; $i < pg_num_rows($result) ; $i++){
       $rows = pg_fetch_array($result, NULL, PGSQL_ASSOC);
-  //    print('id='.$rows['id']);
-  //   print(',count='.$rows['count'].'<br>');
+      print('id='.$rows['id']);
+      print(',count='.$rows['count'].'<br>');
   }
 
   //if ($text_value4=="会場参加"){
   $a = $rows['count'];
   $b = $rows['count'];
-  print('a='.$rows['count']);
+ // print('a='.$rows['count']);
  // } else{
  //   $a = $rows['web'];
   //}
