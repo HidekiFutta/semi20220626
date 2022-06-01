@@ -69,6 +69,7 @@
   //if ($text_value4=="会場参加"){
   $a = $rows['count'];
   $b = $rows['count'];
+  print('a='.$rows['count']);
  // } else{
  //   $a = $rows['web'];
   //}
