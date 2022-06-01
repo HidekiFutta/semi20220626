@@ -98,11 +98,11 @@
                             </label>
                             <label class="contact-skill">
                                 <input type="radio" name="区分" value="申請中の方" onclick="connecttext2('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "申請中の方" ){ echo 'checked'; } ?> />
-                                <span class="contact-skill-txt">申請中の方 </span>
+                                <span class="contact-skill-txt">申請中の方</span>
                             </label>
                             <label class="contact-skill">
                                 <input type="radio" name="区分" value="非会員" onclick="connecttext3('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "非会員" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">非会員 </span>
+                                <span class="contact-skill-txt">申請中の方</span>
                             </label>
                            
                         </td>
