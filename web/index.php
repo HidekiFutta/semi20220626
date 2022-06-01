@@ -33,7 +33,7 @@
     
     $_SESSION["title"] = $title; 
     $_SESSION["Tanto_Address"] = $Tanto_Address;
-    $_SESSION["zoom"] = $zoom;
+    //$_SESSION["zoom"] = $zoom;
     $_SESSION["conncon"] = $conn;
     //$_SESSION["kaisaibi"] = $kaisaibi;
     //$_SESSION["limit"] = $limit;
@@ -155,7 +155,7 @@
                       document.getElementById("textforscb3").disabled = true;                  
                       document.getElementById("nn").disabled = false;                 
                       document.getElementById("dn").disabled = false;                 
-                      document.getElementById("bn").disabled = false;
+                      
                   }
               }
               function connecttext1(id, ischecked ) {
@@ -164,7 +164,7 @@
                       document.getElementById("textforscb3").disabled = true;            
                       document.getElementById("nn").disabled = false;                 
                       document.getElementById("dn").disabled = true;                 
-                      document.getElementById("bn").disabled = true;
+                     
                   }
               }
               function connecttext2(id, ischecked ) {
@@ -173,7 +173,7 @@
                       document.getElementById("textforscb3").disabled = false;
                       document.getElementById("nn").disabled = true;                 
                       document.getElementById("dn").disabled = true;                 
-                      document.getElementById("bn").disabled = true;
+                     
                   }
               }
               function connecttext3(id, ischecked ) {
@@ -182,7 +182,7 @@
                       document.getElementById("textforscb3").disabled = true;
                       document.getElementById("nn").disabled = true;                 
                       document.getElementById("dn").disabled = true;                 
-                      document.getElementById("bn").disabled = true;
+                     
                   }
               }
               function connecttext4(id, ischecked ) {
@@ -191,7 +191,7 @@
                       document.getElementById("textforscb3").disabled = true;
                       document.getElementById("nn").disabled = true;                 
                       document.getElementById("dn").disabled = true;                 
-                      document.getElementById("bn").disabled = true;
+                     
                   }
               }      
               //会場参加の締め切り日設定
