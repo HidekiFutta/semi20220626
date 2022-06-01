@@ -9,13 +9,13 @@
     $w_teiin ="80";                   //Webの定員　91行目に代入
     $Tanto_Address = "fujita@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
-    $zoom  = "https://us02web.zoom.us/meeting/register/tZ0oc-murDwuE9Dd6hEI1affPdZKXafWD1A9";
+    //$zoom  = "https://us02web.zoom.us/meeting/register/tZ0oc-murDwuE9Dd6hEI1affPdZKXafWD1A9";
     //Heroku- AppName- Resources- Herok Postgres- Setting- Database Credentials から
-    $Host     = "ec2-34-230-198-12.compute-1.amazonaws.com"; 
-    $Database = "d32nf8a6j7747f";
-    $User     = "kbqvnqamqwzqlb";
+    $Host     = "ec2-34-231-221-151.compute-1.amazonaws.com"; 
+    $Database = "dam6cigjgg88sa";
+    $User     = "mkbweacyegsrwa";
     $Port     = "5432";
-    $Password = "fdbf13dc595b6a64698932988de9a757b833b09399b6b8c0285a5751ff4711e8";
+    $Password = "688b094fee87df76c5d40d78c76baa84ce01df598921cb0cd76778ab56e55a55";
     //以上計12か所イベントごとに要変更
     $limit2 =date('n月j日',  strtotime($limit)); 
     $conn = "host=".$Host." "."port=".$Port." "."dbname=".$Database." "."user=".$User." "."password=".$Password;
@@ -102,7 +102,7 @@
                             </label>
                             <label class="contact-skill">
                                 <input type="radio" name="区分" value="非会員" onclick="connecttext3('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "非会員" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt">申請中の方</span>
+                                <span class="contact-skill-txt">非会員</span>
                             </label>
                            
                         </td>

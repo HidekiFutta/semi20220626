@@ -155,12 +155,11 @@
           </tr>
           <tr>
             <th style="text-align:left" colspan="2"> 
-　　          <?php if($b<16): ?>          
+　　          <?php if($b<80): ?>          
     　　　          <p>　この内容でよろしければ『送信する』ボタンを押して下さい．<br>
     　変更が必要な場合は『戻る』ボタンで登録フォームに戻ります．</p>
          　　 <?php else : ?>
-         　　　　　 <p>　　<font color="red">会場参加は定員に達しました．</font><br>
-         　 『戻る』ボタンで登録フォームに戻り、Web参加でお申し込みください．</p>
+         　　　　　 <p>　　<font color="red">定員に達しました．</font></p>
       　　    <?php endif; ?>
             </th>
           </tr>
@@ -189,7 +188,7 @@
                 
                 <?php
                   //データを配列に
-                  $list = array ($a,$text_value0,$text_value1, $text_value2, $text_value3, $text_value4,$text_value5,$text_value6,$text_value7,$text_value10,$title);
+                  $list = array ($a,$text_value0,$text_value1, $text_value2, $text_value3, $text_value5,$text_value6,$text_value7,$text_value10,$title);
                   mb_convert_variables('Shift_JIS', 'UTF-8', $list);
                 ?>            
               <?php endif; ?>
