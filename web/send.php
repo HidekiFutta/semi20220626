@@ -75,8 +75,8 @@
   </ul>
       ---------------------------------------------------------------
   
-  <p>・視聴に関しては6月19日までにあらためてご案内いたします。<br>
-      連絡が合ない場合は下記までお問い合わせください。</p>
+  <p>・視聴に関する詳しい情報は、6月19日までにあらためてご案内いたします。<br>
+  　　　もし、19日を過ぎても連絡がない場合は、下記までお問い合わせください。</p>
   
   <p>・また、登録の取り消しやご不明な点は<br>
   　　 mail:  itdrive@daihougi.ne.jp<br>
@@ -133,7 +133,7 @@ $email = new \SendGrid\Mail\Mail();
   $email->setFrom("itdrive@daihougi.ne.jp", "大放技");
   $email->setSubject("大放技イベント受付");
   $email->addTo("hima71f@yahoo.co.jp", "User");
-  //$email->addTo($E_Address, "User"); //担当者のアドレス
+  $email->addTo($E_Address, "User"); //担当者のアドレス
   $email->addContent("text/plain", $messageAdmin);
   $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
   try {

@@ -7,7 +7,7 @@
     $limit=   "2022-06-23T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
     $k_teiin ="12";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
-    $Tanto_Address = "fujita@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
+    $Tanto_Address = "tanigawa@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
     //$zoom  = "https://us02web.zoom.us/meeting/register/tZ0oc-murDwuE9Dd6hEI1affPdZKXafWD1A9";
     //Heroku- AppName- Resources- Herok Postgres- Setting- Database Credentials から
