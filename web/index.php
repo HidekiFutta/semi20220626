@@ -2,10 +2,10 @@
   <?php
 
     //イベントによって変更する6箇所 + ZoomURL + DataBaseのURI5つ
-    $title =  "フレッシャーズセミナー"; //あまり長くなると折り返すので注意！　52行目に代入
+    $title =  "フレッシャーズセミナーt"; //あまり長くなると折り返すので注意！　52行目に代入
     $kaisaibi="2022-06-26T17:30:00";  //開催終了後（時間）に受付を停止　244行目に代入
     $limit=   "2022-06-23T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
-    $k_teiin ="12";                   //会場の定員　95行目に代入
+    $k_teiin ="80";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
     $Tanto_Address = "tanigawa@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
@@ -83,8 +83,7 @@
                             <input type="email"　id="email_2" required="required" placeholder="必須" name="email_2" class="form-text" oninput="CheckEmail_2(this)" value="<?php if(!empty($_POST["email_1"]) ){ echo $_POST["email_1"]; } ?>"/>
                         </td>
                     </tr>
-                    <tr>
-                    
+                    <tr>                   
                     <tr>
                         <th class="contact-item">区　分</th>
                         <td class="contact-body">
@@ -103,8 +102,7 @@
                             <label class="contact-skill">
                                 <input type="radio" name="区分" value="非会員" onclick="connecttext3('textforscb3',this.checked);" <?php if( !empty($_POST['区分']) && $_POST['区分'] === "非会員" ){ echo 'checked'; } ?>/>
                                 <span class="contact-skill-txt">非会員</span>
-                            </label>
-                           
+                            </label>                        
                         </td>
                     </tr>
                     <tr>
@@ -118,8 +116,7 @@
                         <td class="contact-body">
                             <input type="number" name="Dナンバー" id ="dn" class="form-text3" value="<?php if( !empty($_POST['Dナンバー']) ){ echo $_POST['Dナンバー']; } ?>"/>
                         </td>
-                    </tr>
-                    
+                    </tr>                   
                     <tr>
                         <th class="contact-item">備　考</th>
                         <td class="contact-body">
@@ -154,8 +151,7 @@
                   if(ischecked==true){
                       document.getElementById("textforscb3").disabled = true;                  
                       document.getElementById("nn").disabled = false;                 
-                      document.getElementById("dn").disabled = false;                 
-                      
+                      document.getElementById("dn").disabled = false;                                    
                   }
               }
               function connecttext1(id, ischecked ) {
@@ -163,8 +159,7 @@
                   if(ischecked==true){
                       document.getElementById("textforscb3").disabled = true;            
                       document.getElementById("nn").disabled = false;                 
-                      document.getElementById("dn").disabled = true;                 
-                     
+                      document.getElementById("dn").disabled = true;                                    
                   }
               }
               function connecttext2(id, ischecked ) {
@@ -172,8 +167,7 @@
                   if(ischecked==true){
                       document.getElementById("textforscb3").disabled = false;
                       document.getElementById("nn").disabled = true;                 
-                      document.getElementById("dn").disabled = true;                 
-                     
+                      document.getElementById("dn").disabled = true;                                   
                   }
               }
               function connecttext3(id, ischecked ) {
@@ -181,8 +175,7 @@
                   if(ischecked==true){
                       document.getElementById("textforscb3").disabled = true;
                       document.getElementById("nn").disabled = true;                 
-                      document.getElementById("dn").disabled = true;                 
-                     
+                      document.getElementById("dn").disabled = true;                                    
                   }
               }
               function connecttext4(id, ischecked ) {
@@ -190,8 +183,7 @@
                   if(ischecked==true){
                       document.getElementById("textforscb3").disabled = true;
                       document.getElementById("nn").disabled = true;                 
-                      document.getElementById("dn").disabled = true;                 
-                     
+                      document.getElementById("dn").disabled = true;                                   
                   }
               }      
               //会場参加の締め切り日設定
