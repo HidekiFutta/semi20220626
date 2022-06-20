@@ -212,7 +212,7 @@
               } 
               //定員に達したら
               var comment2 = "";
-              if($k_teiin = 100){// 有効期限の範囲外　80名を超えたら力技で締め切る
+              if($k_teiin = 120){// 有効期限の範囲外　80名を超えたら力技で締め切る
                   comment2= "<font color='red'>締め切り延長23日まで</font>";
                   document.getElementById("edit_area2").innerHTML = comment2;
                   document.getElementById("conf").style.backgroundColor = "gray"; //グレイアウト
