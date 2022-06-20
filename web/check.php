@@ -33,7 +33,7 @@
   $Tanto_Address = $_SESSION["Tanto_Address"];
   //$zoom = $_SESSION["zoom"];
   $conn = $_SESSION["conncon"];
-  
+  $w_teiin = $_SESSION["w_teiin"];
   //トークンチェック・POSTからSESSIONへ受け渡し
   if($_SESSION["input_token"] === $_POST["input_token"]) {
     $_SESSION = $_POST;
@@ -73,7 +73,6 @@
  // } else{
  //   $a = $rows['web'];
   //}
-
   //echo $a;
   //https://tokkan.net/php/pos.html
   //pg_query($link, "UPDATE sanka SET count= $a WHERE id = '1'");   
@@ -84,6 +83,8 @@
   $_SESSION["Tanto_Address"] = $Tanto_Address;
   //$_SESSION["zoom"] = $zoom;
   $_SESSION["conncon2"] = $conn; // send.php に値を渡す
+
+  //158,180の数字に注意＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 ?>
 
 <!DOCTYPE html>  
@@ -156,7 +157,7 @@
           </tr>
           <tr>
             <th style="text-align:left" colspan="2"> 
-　　          <?php if($b<80): ?>          
+　　          <?php if($b<500): ?>          
     　　　          <p>　この内容でよろしければ『送信する』ボタンを押して下さい．<br>
     　変更が必要な場合は『戻る』ボタンで登録フォームに戻ります．</p>
          　　 <?php else : ?>
@@ -178,7 +179,7 @@
               <input type="submit" formaction="./index.php" value="戻る" style="position: relative; left: 110px; top: 20px;"/>
 
               <?php if(!$tokenValidateError): ?>
-                <?php if($b<80): ?>
+                <?php if($b<500): ?>
                   　<input type="submit" value="送信する" style="position: relative; left: 130px; top: 20px;"/>
                 <?php else : ?>
                     <input type="submit" disabled value="送信する" style="position: relative; left: 130px; top: 20px;"/>

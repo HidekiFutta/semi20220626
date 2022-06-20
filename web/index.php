@@ -39,7 +39,7 @@
     //$_SESSION["limit"] = $limit;
     //$_SESSION["simekiri"] = $simekiri;
     //$_SESSION["k_teiin"] = $k_teiin;
-    //$_SESSION["w_teiin"] = $w_teiin;
+    $_SESSION["w_teiin"] = $w_teiin;
   ?>
    
  <!DOCTYPE html>  
@@ -193,7 +193,7 @@
               var end   = endObj.getTime();
               var comment = "";
               if(end <= today){// 有効期限の範囲外
-                  comment= "<font color='red'>会場参加　締め切りました（締切<?php echo $limit2 ?>)</font>";
+                  comment= "<font color='red'>申込期間を過ぎました（締切<?php echo $limit2 ?>)</font>";
                   document.getElementById("edit_area").innerHTML = comment;
                   document.getElementById("kaijyo").disabled = true;  //締切後押せなくする
               }
@@ -209,7 +209,16 @@
                   document.getElementById("conf").disabled = true;  //締切後押せなくする
                   
                   //<button style="background-color:red">締　切</button>
-              }                 
+              } 
+              //定員に達したら
+              var comment2 = "";
+              if($k_teiin = 100){// 有効期限の範囲外　80名を超えたら力技で締め切る
+                  comment2= "<font color='red'>定員に達したので締め切りました</font>";
+                  document.getElementById("edit_area2").innerHTML = comment2;
+                  document.getElementById("conf").style.backgroundColor = "gray"; //グレイアウト
+                  document.getElementById("conf").value = "終　了";  //締切後レイアウトする
+                  document.getElementById("conf").disabled = true;  //締切後押せなくする
+              }                                 
             // -->
             </script>            
         </div>
