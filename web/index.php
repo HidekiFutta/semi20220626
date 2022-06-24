@@ -5,7 +5,7 @@
     $title =  "フレッシャーズセミナー"; //あまり長くなると折り返すので注意！　52行目に代入
     $kaisaibi="2022-06-26T17:30:00";  //開催終了後（時間）に受付を停止　244行目に代入
     $limit=   "2022-06-23T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
-    $k_teiin ="80";                   //会場の定員　95行目に代入
+    $k_teiin ="100";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
     $Tanto_Address = "tanigawa@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
@@ -212,8 +212,8 @@
               } 
               //定員に達したら
               var comment2 = "";
-              if($k_teiin > 120){// 有効期限の範囲外　80名を超えたら力技で締め切る
-                  comment2= "<font color='red'>締め切り延長23日まで</font>";
+              if($k_teiin =100){// 有効期限の範囲外　定員（80名）に達したら=80として、力技で締め切る
+                  comment2= "<font color='red'>締め切りました</font>";
                   document.getElementById("edit_area2").innerHTML = comment2;
                   document.getElementById("conf").style.backgroundColor = "gray"; //グレイアウト
                   document.getElementById("conf").value = "終　了";  //締切後レイアウトする
