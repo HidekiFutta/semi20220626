@@ -55,7 +55,7 @@
     </head>
     <body>
         <div class="contact">
-            <h1 class="contact-ttl" id="edit_area2" font color='red'><?php echo $title?> 登録期間終了</h1>
+            <h1 class="contact-ttl" id="edit_area2" font color="red"><?php echo $title?> 登録期間終了</h1>
          
             <form method="post" action="./check.php">
                 <table class="contact-table">
@@ -125,7 +125,7 @@
                     </tr>
                 </table>
 
-                <input class="contact-submit" id="conf" type="submit" style.backgroundColor = "gray" disabled = "true" name="submit" value="終　了" />
+                <input class="contact-submit" id="conf" type="submit" backgroundColor="gray" disabled = "true" name="submit" value="終　了" />
             </form>
             
             <script language="JavaScript" type="text/javascript">
