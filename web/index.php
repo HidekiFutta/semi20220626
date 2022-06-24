@@ -5,7 +5,7 @@
     $title =  "フレッシャーズセミナー"; //あまり長くなると折り返すので注意！　52行目に代入
     $kaisaibi="2022-06-26T17:30:00";  //開催終了後（時間）に受付を停止　244行目に代入
     $limit=   "2022-06-23T23:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
-    $k_teiin ="100";                   //会場の定員　95行目に代入
+    $k_teiin ="100";                  //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
     $Tanto_Address = "tanigawa@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
     //Zoom URL
@@ -125,7 +125,7 @@
                     </tr>
                 </table>
 
-                <input class="contact-submit" id="conf" type="submit" name="submit" value="確　認" />
+                <input class="contact-submit" id="conf" type="submit" disabled = "true" name="submit" value="終　了" />
             </form>
             
             <script language="JavaScript" type="text/javascript">
